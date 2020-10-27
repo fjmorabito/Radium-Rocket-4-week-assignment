@@ -144,3 +144,41 @@ if(age < 2) {
 } else {
     alert("Anciano") 
 }
+
+//                                                  For
+
+/* part a)  create an array that contain five words and go over the array using a loop for of JavaScript to show an alert using
+each words.*/
+
+var array1 = ["Hello" , "world" , "i" , "am" , "Federico"];
+for (counter = 0; counter < array1.length; counter++) {
+    alert(array1[counter]);    
+}
+
+/* part b) To the previous array, convert the first letter of each word to uppercase and show an alert for each modified word. */
+
+var array1 = ["Hello" , "world" , "i" , "am" , "Federico"];
+for (counter = 0; counter < array1.length; counter++) {
+    alert(array1[counter].substring(0 , 1).toUpperCase() + array1[counter].substring (1));    
+}
+
+/*part c) Create a variable called "sentence" that has an empty string, then to the array from point a) go through it with 
+a for loop to save each word within the sentence variable. At the end show a single alert with the complete chain.*/
+
+var array1 = ["Hello" , "world" , "i" , "am" , "Federico"];
+var sentence = "";
+for (counter = 0 ; counter <= array1.length - 1; counter++) {
+        sentence += (array1[counter]);
+}
+alert(sentence);
+
+/* part d) 
+Create an empty array and with a for loop of 10 repetitions, fill the array with the number of the repetition, that is, at the 
+end of the execution of the for loop, there should be 10 elements within the array, from number 0 to number 9. 
+Show by the browser console the to the final array*/
+
+var array1 = [];
+for(counter = 0 ; counter <= 9 ; counter++) {
+     array1[counter] = counter;
+}
+console.log(array1);
