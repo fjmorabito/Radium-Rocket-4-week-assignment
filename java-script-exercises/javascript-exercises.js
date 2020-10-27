@@ -56,3 +56,52 @@ var str2= str.substring(0,1).toUpperCase() +str.substring(1,str.indexOf(" ")).to
 " " + str.substring(str.indexOf(" ")+1,str.indexOf(" ")+2).toUpperCase() + str.substring(str.indexOf(" ")
 +2, str.length).toLowerCase();
 alert (str2);
+
+//                                                 Arrays
+
+/* part a) given the next array, show in console the month 5 and 11.*/
+
+var month=["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre",
+"Noviembre", "Diciembre"];
+console.log( month[4] , " and " , month[10]);
+
+/* part b) sort the array of months alphabetically and show in console.*/
+
+var month=["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre",
+"Noviembre", "Diciembre"];
+month.sort();
+
+/* part c) add an element at the beggining and the end of the array*/
+
+var month = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre",
+"Noviembre", "Diciembre"];
+month.unshift("First Element");
+month.push("Last Element");
+alert(month);
+
+/* part d) remove an element at the beggining and end of the array*/
+
+var month=["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre",
+ "Noviembre", "Diciembre"];
+month.shift();
+month.pop();
+alert(month);
+
+/* part e) invert the order of the array*/
+
+var month = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre",
+"Noviembre", "Diciembre"];
+month.reverse();
+alert(month);
+
+/* part f) Unite all the elements of the array in a single string where each month is separated by a hyphen */
+
+var month = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre",
+"Noviembre", "Diciembre"];
+month.join("-");
+
+/* part g) create a copy of the array of months that contain from Mayo to Noviembre*/
+
+var month = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre",
+"Noviembre", "Diciembre"];
+var month2 = month.slice(4 , 11);
