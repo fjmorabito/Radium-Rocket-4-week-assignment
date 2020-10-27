@@ -182,3 +182,76 @@ for(counter = 0 ; counter <= 9 ; counter++) {
      array1[counter] = counter;
 }
 console.log(array1);
+
+//                                                Functions
+
+/* part a) Create a sum function that receives two numeric values ​​and returns the result. Execute the function and save the 
+result in a variable, showing the value of said variable in the browser console.*/
+
+function sum(a , b) {
+    return a + b;
+}
+var resSum = sum(5 , 4);
+console.log(resSum);
+
+/* part b) To the previous sum function, add a validation to control if any of the parameters is not a number, show an alert 
+clarifying that one of the parameters has an error and return the NaN value as a result.*/
+
+function sum(a , b) {
+    if ( typeof a !== 'number') {
+       alert("the a variable is not a number");
+       return NaN;
+       }   else if ( typeof b !== 'number' ) {
+               alert("the b variable is not a number");
+               return NaN;
+           }
+           else {
+               return a + b;
+           }
+}
+var resSum = sum(5 , 4);
+console.log(resSum);
+
+/* part c) Create a validate integer function that takes a number as a parameter and returns true if it is an integer.*/
+
+function validateInteger(a) {
+    if (a % 1 == 0) {
+        return true;
+    }
+}
+
+/* part d) 
+To the sum function of exercise 6b) add a call that validates that the numbers are integers. In case there are decimals,
+ show an alert with the error and return the number converted to integer (rounded).*/
+
+function sum(a , b) {
+    if ( typeof a !== 'number') {
+       alert('the a variable is not a number');
+       return NaN;
+       }   else if ( typeof b !== 'number' ) {
+               alert('the b variable is not a number');
+               return NaN;
+           } else if ( a % 1 != 0 || b % 1 != 0 ) {
+               var result = Math.round(a + b);
+                alert('One of the parameters is not integer. The result is gonna be rounded: ' + result);
+                return result;
+           }    else {
+                    return a + b;
+           }
+}
+console.log(sum(4 , 4.98));
+
+/* part e) Convert the validation of exercise 6b) into a separate function and call it within the sum function, checking that
+ everything continues to work the same.*/
+
+ function validParameter(c) {
+    if (typeof c !=='number') {
+    alert("the parameter is not a number");
+    return NaN;
+    }
+    return c;
+}
+function sum(a , b) {
+    return (validParameter(a) + validParameter(b));
+}
+console.log(sum(5 , "mayo"));
